@@ -7,14 +7,83 @@
 <link href="https://cdn.jsdelivr.net/npm/daisyui@4.7.2/dist/full.min.css" rel="stylesheet" type="text/css" />
 <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body>
-
-    
+<body class="">
 
 
+<header class="bg-[#0D6EFD0D] min-h-[556px]">
+    <!-- search section -->
+    <section class="max-w-[80%] mx-auto py-10 space-y-12">
+     <!-- 1 line -->
+<div class="flex justify-between items-center">
+    <h1 class="text-2xl font-bold">Hot Gadgets</h1>
+    <button class="btn bg-[#0D6EFD] text-white">Sign Up</button>
+</div>
+<!-- header title -->
+<div class="text-center space-y-5">
+    <h1 class="text-5xl font-extrabold">Apple Iphone 13 Pro Max</h1>
+    <p class="text-base text-balance font-medium text-gray-600 ">There are many variations of passages of Lorem Ipsum available, but the majority <br>
+        have suffered alteration in some form, by injected humou.</p>
+        <button class="btn bg-[#0D6EFD] text-white">Buy Now</button>
+</div>
+
+    </section>
+
+</header>
+
+<main class="max-w-[80%] mx-auto">
+
+<!-- three phone pic -->
+<div class="flex justify-center items-center -mt-36 lg:-mt-64 p-10">
+        <img src="Group 48095420.png" alt="" class="lg:w-2/3">
+</div>
+    <!-- Search your phone -->
+<div class="space-y-7 py-4">
+
+    <h1 class="text-3xl font-bold text-center text-balance">Search your phone</h1>
+    <!-- search field -->
+    <div class="flex justify-center items-center">
+        <input type="text" placeholder="Search here" class="input input-bordered w-full max-w-xs" id="inputField" />
+        <button class="btn  bg-black text-white font-bold -ml-[79px]" type="submit" onclick="search()">Search</button>
+    </div>
+
+</div>
+
+
+<!-- card section -->
+
+<section class="grid grid-cols-1 lg:grid-cols-3 gap-9" id="cardContainer">
+
+
+</section>
+
+<!-- see more btn -->
+<div class="flex justify-center items-center py-10 hidden" id="seeMore">
+    <button class="btn btn-warning" onclick="seeMore()">See-More</button>
+</div>
 
 
 
+
+
+
+
+
+
+<!-- modal -->
+
+<!-- Open the modal using ID.showModal() method -->
+
+<div id="modalId">
+    <dialog id="D" class="modal modal-bottom sm:modal-middle">
+        
+    </dialog>
+</div>
+
+
+</main>
+
+
+<script src="function.js"></script>
     <script src="config.js"></script>
 </body>
 </html>
