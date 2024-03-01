@@ -1,4 +1,5 @@
 
+
 const Api=async (userSearched='iphone')=>{
     const url=`https://openapi.programming-hero.com/api/phones?search=${userSearched}`
     const response=await fetch(url)
@@ -9,6 +10,7 @@ const Api=async (userSearched='iphone')=>{
 Api()
 // user search
 function search(){
+    loading(true)
     const inputField=getId('inputField').value ;
     Api(inputField)
 }
@@ -16,11 +18,14 @@ function search(){
 let seeMoreStatus=false;
 
 // display ////
-function Display(DATA,seeMoreStatus){
+function Display(DATA,seeMoreStatus,dataLoad){
     
     // phone container
 const phoneContainer=getId('cardContainer')
 phoneContainer.innerHTML=''
+
+
+
 
 // see more button Show and hide
 if(DATA.length>6){
@@ -53,6 +58,8 @@ phoneCard.innerHTML=`
 
 `
 phoneContainer.appendChild(phoneCard) }
+loading(false)
+
 }
 
 
@@ -83,13 +90,7 @@ Modal.innerHTML=`
           </div>
           </div>
         </div>
-`
-
-
-
-
-    })
-}
+`   })}
 
 
 // see more btn
@@ -98,3 +99,10 @@ seeMoreStatus=true;
 search()
  }
 
+
+// data loading 
+function loading(dataLoad){
+if(dataLoad){
+    getId('dataLoad').classList.remove('hidden')
+}else{
+    getId('dataLoad').classList.add('hidden')}}
