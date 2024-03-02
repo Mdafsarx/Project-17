@@ -23,7 +23,7 @@
     <h1 class="text-5xl font-extrabold">Apple Iphone 13 Pro Max</h1>
     <p class="text-base text-balance font-medium text-gray-600 ">There are many variations of passages of Lorem Ipsum available, but the majority <br>
         have suffered alteration in some form, by injected humou.</p>
-        <button class="btn bg-[#0D6EFD] text-white">Buy Now</button>
+        <button class="btn bg-[#0D6EFD] text-white" id="buyNow">Buy Now</button>
 </div>
 
     </section>
@@ -50,15 +50,20 @@
 
 <!-- loading -->
 <div class=" flex justify-center items-center my-10 hidden" id="dataLoad">
-    <span class="loading loading-spinner loading-lg size-14"></span>
+    <span class="loading loading-bars loading-lg size-20"></span>
 </div>
 
 <!-- card section -->
 
 <section class="grid grid-cols-1 lg:grid-cols-3 gap-9" id="cardContainer">
 
-
 </section>
+
+<!-- invalid search message -->
+<div class="flex justify-center items-center py-8 hidden"id='emptyMessage' >
+<h1 class="text-5xl font-bold text-red-600"><span id="invalidSearch"></span>   Not available</h1>
+</div>
+
 
 <!-- see more btn -->
 <div class="flex justify-center items-center py-10 hidden" id="seeMore">
@@ -73,14 +78,17 @@
 
 
 
+
 <!-- modal -->
 
 <!-- Open the modal using ID.showModal() method -->
 
 <div id="modalId">
-    <dialog id="D" class="modal modal-bottom sm:modal-middle">
-        
-    </dialog>
+   <!-- Open the modal using ID.showModal() method -->
+<dialog id="D" class="modal modal-bottom sm:modal-middle">
+  
+</dialog>
+
 </div>
 
 
@@ -88,7 +96,7 @@
 
 
 
-<footer class="footer footer-center p-10 bg-base-200 text-base-content rounded">
+<footer class="footer footer-center p-10 bg-base-200 text-base-content rounded mt-20">
     <nav class="grid grid-flow-col gap-4">
       <a class="link link-hover">About us</a>
       <a class="link link-hover">Contact</a>
